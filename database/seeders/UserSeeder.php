@@ -23,7 +23,7 @@ class UserSeeder extends Seeder
                 'email_verified_at' => Carbon::now()->toDateTimeString(),
                 'password' => Hash::make("admin"),
                 'role' => 3,
-                'image' => 'assets/admin.jpg'
+                'image' => 'storage/assets/profile/admin.png'
             ]
             ]);
     }

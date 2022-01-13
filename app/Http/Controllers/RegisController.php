@@ -22,6 +22,7 @@ class RegisController extends Controller
 
         if($request->file('image')){
             $validate['image'] = $request->file('image')->store('assets/profile');
+            $validate['image'] = 'storage/'.$validate['image'];
         }
         
         $validate['password'] = Hash::make($validate['password']);

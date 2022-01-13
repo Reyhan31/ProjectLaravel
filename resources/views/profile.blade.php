@@ -2,7 +2,8 @@
 
 @section('content')
 <div class="d-flex m-2">
-    <img src="{{URL::asset('storage/'.auth()->user()->image)}}" alt="" style="width: 13%">
+    {{-- <img src="{{URL::asset('storage/'.auth()->user()->image)}}" alt="" style="width: 13%"> --}}
+    <img src="{{auth()->user()->image}}" alt="" style="width: 13%">
     <div class="m-2">
     <form action="/changeProfile" method="post" enctype="multipart/form-data">
     @csrf
